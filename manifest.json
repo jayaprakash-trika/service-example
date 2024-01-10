@@ -2,7 +2,7 @@
   "name": "service-example",
   "vendor": "vtex",
   "version": "0.2.22",
-  "title": "Service Example",
+  "title": "customForm",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
@@ -19,6 +19,13 @@
     {
       "name": "outbound-access",
       "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
         "host": "httpstat.us",
         "path": "*"
       }
@@ -30,5 +37,39 @@
       "name": "colossus-write-logs"
     }
   ],
+  "settingsSchema": {
+    "title": "Jayaprakash-settings",
+    "type": "object",
+    "access": "public",
+    "properties": {
+      "apiKey": {
+        "title": "API Key",
+        "description": "Enter the API Key ",
+        "type": "string"
+      },
+      "appToken": {
+        "title": "VTEX App Token key",
+        "description": "Enter the app token",
+        "type": "string"
+      },
+      "recaptchaKey": {
+        "title": "ReCaptchaKey",
+        "description": "Enter the recaptcha-key",
+        "type": "string"
+      }
+    }
+  },
+  "ReCaptchaKey": {
+    "title": "Re Captcha Key",
+    "description": "Key Required",
+    "type": "object",
+    "properties": {
+      "recaptchaKey": {
+        "title": "ReCaptchaKey",
+        "description": "Enter the recaptcha-key",
+        "type": "string"
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
