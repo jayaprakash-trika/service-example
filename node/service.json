@@ -13,6 +13,10 @@
     "captcha": {
       "path": "/v1/captcha",
       "public": true
+    },
+    "student": {
+      "path": "/v1/student",
+      "public": true
     }
   }
 }

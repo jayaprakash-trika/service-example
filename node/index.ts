@@ -5,6 +5,8 @@ import { Clients } from './clients'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
 import { getCaptchaData } from './middlewares/getCaptcha'
+import { getStudent } from './middlewares/get-student'
+import { createStudent } from './middlewares/create-student'
 
 const TIMEOUT_MS = 800
 
@@ -56,5 +58,10 @@ export default new Service({
     captcha: method({
       GET: [getCaptchaData],
     }),
+    student: method({
+      GET: [getStudent],
+      POST: [createStudent]
+
+    })
   },
 })
