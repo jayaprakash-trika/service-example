@@ -12,7 +12,7 @@ export default class Student extends ExternalClient {
 
     public async getStudentData() {
         const customerData = await this.http.get<Promise<any>>(
-            `/api/dataentities/JS/Search`,
+            `/api/dataentities/JP/Search`,
             await this.getHeaders()
         )
         return customerData
@@ -20,7 +20,7 @@ export default class Student extends ExternalClient {
 
     public async createStudentData(payload: any) {
         const savedData = await this.http.post<Promise<any>>(
-            `/api/dataentities/JS/documents`, payload,
+            `/api/dataentities/JP/documents`, payload,
             await this.getHeaders()
         )
         console.log("saved" + savedData)
